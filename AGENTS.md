@@ -4,9 +4,9 @@ Public marketing + docs site for Gameplane; the `website/` submodule of `Gamepla
 
 ## House rules
 
-- **Design-first:** visual source of truth is `website.pen` in this repo (Pencil MCP only — never read/edit the file directly). Update the design first; export touched nodes to `website-export/json/<id>.json` + `website-export/screenshots/<id>.png` in the same commit. Palette follows the main app's HeroUI theme (`web/src/styles/globals.css` in the main repo).
+- **Modern UI, code-first:** design pages directly in code with a modern, consistent look (clear hierarchy, generous spacing, responsive, accessible, light and dark). No Pencil/`.pen` design step or export is required. Palette follows the main app's HeroUI theme (`web/src/styles/globals.css` in the main repo).
 - **CI verifies:** locally only `npm run build` / `npm run check`; never run lint/tests locally. Fix what CI flags; no suppressions or loosened rules.
-- **Git:** signed commits (`git commit -s`), conventional prefixes, one logical unit each; one branch per unit of work, PR to `main`, delete branch after merge. Then bump the submodule pointer in the main repo (`git add website`).
+- **Git:** signed commits (`git commit -s`), conventional prefixes, one logical unit each; one branch per unit of work, delete branch after merge. **Never open a PR against upstream `GameplanePanel/website`**; PRs only ever go chunksmith → chunksmith, and this repo has no chunksmith fork, so stop and ask instead (main-repo rule 19). Then bump the submodule pointer in the main repo (`git add website`).
 - **TypeScript:** strict; `no-explicit-any` and `no-floating-promises` are errors.
 - **Multi-agent work** follows main-repo rules 13/17/18 (batched agents, sliced briefs, one diff review per batch, scripts for mechanical changes).
 
